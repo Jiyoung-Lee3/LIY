@@ -130,7 +130,8 @@ nav {
     gap: 8%;
     /* Create a controlled gap between text and image */
     padding: 0 5%;
-    margin-top: 60px;
+    margin-top: 100px;
+    /* Increased to prevent overlap with fixed nav */
 }
 
 .hero-content {
@@ -171,20 +172,24 @@ nav {
 .profile-img-wrapper {
     width: 100%;
     max-width: 380px;
-    background: var(--glass);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
+    background: #ffffff;
     border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    /* Adds space at the top to prevent hair clipping */
 }
 
 .profile-img-wrapper img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     object-position: top;
+    /* Ensures the top of the image (hair) is prioritized */
 }
 
 /* Buttons */
